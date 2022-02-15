@@ -59,8 +59,8 @@ for i in range(8):
         
    
 
-def move_enemy(): 
-    for i in enemy_list:
+    def move_enemy(): 
+        for i in enemy_list:
         i.goto(i.xcor(), i.ycor()-i.speed)
 
         if i.ycor() < -400:
@@ -69,25 +69,25 @@ def move_enemy():
 
 
 
-def move_left():
-    if car.xcor()>=-200:
+    def move_left():
+        if car.xcor()>=-200:
         car.goto(car.xcor()-20, car.ycor())
 
-def move_right():
-    if car.xcor()<= 200:
+    def move_right():
+        if car.xcor()<= 200:
         car.goto(car.xcor()+20, car.ycor())
 
 
 
 
-win.onkey(move_left, "Left")
-win.onkey(move_right, "Right")
+    win.onkey(move_left, "Left")
+    win.onkey(move_right, "Right")
 
 
-game_over = False
+    game_over = False
 
 
-while not game_over:
+    while not game_over:
     time.sleep(0.0001)
     move_enemy()
     
